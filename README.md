@@ -28,25 +28,21 @@ This repository showcases a machine learning project pipeline designed to predic
 * Connect to your instance using SSH:
 
 <div>
-    <pre>
+<pre>
 ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
-    </pre>
+</pre>
 </div>
 
 
 2. Install Docker on EC2
 
 <div>
-    <pre>
-
-1. sudo apt-get update -y 
-2. sudo apt-get upgrade -y 
-3. curl -fsSL https://get.docker.com -o get-docker.sh 
-4. sudo sh get-docker.sh 
-5. sudo usermod -aG docker ubuntu 
-6. newgrp docker
-
-   </pre>
+    <pre>1. sudo apt-get update -y 
+         2. sudo apt-get upgrade -y 
+         3. curl -fsSL https://get.docker.com -o get-docker.sh 
+         4. sudo sh get-docker.sh 
+         5. sudo usermod -aG docker ubuntu 
+         6. newgrp docker </pre>
 </div>
 
 3. Set Environment Variables
