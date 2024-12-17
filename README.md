@@ -20,6 +20,7 @@ This repository showcases a machine learning project pipeline designed to predic
 * MongoDB instance (local or cloud-based)
 * GitHub repository linked to your project
 ## AWS EC2 Setup and Docker Installation
+
 1. Launch an EC2 Instance
 
 * Choose an Ubuntu AMI for the instance.
@@ -27,6 +28,7 @@ This repository showcases a machine learning project pipeline designed to predic
 * Connect to your instance using SSH:
 
 `ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>`
+
 2. Install Docker on EC2
 
 
@@ -36,12 +38,14 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker ubuntu
 newgrp docker
+
 3. Set Environment Variables
 
 
 export MONGODB_URL="mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>?retryWrites=true&w=majority"
 export AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID>
 export AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY>  # Optional
+
 4. Pull and Run Docker Containers
 
 * Clone the repository:
@@ -51,4 +55,38 @@ cd DataFlow-Prediction-Pipeline
 Build and run the container:
 
 * docker-compose up --build -d
+
+## Self-Hosted Runner Setup on EC2
+
+1. Go to GitHub Repository Settings
+
+* Navigate to Settings > Actions > Runners > New self-hosted runner.
+
+2. Select OS and Run Commands
+
+* Choose Linux and execute the provided commands one by one in your EC2 terminal:
+
+mkdir actions-runner && cd actions-runner
+curl -o actions-runner-linux-x64-2.309.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.309.0/actions-runner-linux-x64-2.309.0.tar.gz
+tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
+./config.sh --url https://github.com/yourusername/DataFlow-Prediction-Pipeline --token YOUR_GITHUB_TOKEN
+./run.sh
+
+3. Set the Runner to Start Automatically
+
+
+sudo ./svc.sh install
+sudo ./svc.sh start
+
+## GitHub Secrets Setup
+
+1. Go to Settings > Secrets and variables > Actions > New repository secret.
+
+2. Add the following secrets:
+
+* AWS_ACCESS_KEY_ID
+* AWS_SECRET_ACCESS_KEY
+* AWS_DEFAULT_REGION (e.g., us-east-1)
+* ECR_REPO (for Docker images)
+
 
