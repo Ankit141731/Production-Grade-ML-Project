@@ -29,9 +29,7 @@ This repository showcases a machine learning project pipeline designed to predic
 
 <div>
 <pre>
-ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
-</pre>
-</div>
+ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS></pre></div>
 
 
 2. Install Docker on EC2
@@ -44,9 +42,7 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 3. curl -fsSL https://get.docker.com -o get-docker.sh 
 4. sudo sh get-docker.sh 
 5. sudo usermod -aG docker ubuntu 
-6. newgrp docker 
-</pre>
-</div>
+6. newgrp docker </pre></div>
 
 3. Set Environment Variables
 
@@ -65,14 +61,12 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 <pre>
 
 1. git clone https://github.com/yourusername/DataFlow-Prediction-Pipeline.git
-2. cd DataFlow-Prediction-Pipeline
-</pre>
-</div>
+2. cd DataFlow-Prediction-Pipeline</pre></div>
 
 * Build and run the container:
 
 <div>
-    <pre>docker-compose up --build -d</pre>
+<pre>docker-compose up --build -d</pre>
 </div>
 
 
@@ -95,9 +89,7 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 2. curl -o actions-runner-linux-x64-2.309.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.309.0/actions-runner-linux-x64-2.309.0.tar.gz
 tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
 3. ./config.sh --url https://github.com/yourusername/DataFlow-Prediction-Pipeline --token YOUR_GITHUB_TOKEN
-4. ./run.sh
-</pre>
-</div>
+4. ./run.sh</pre></div>
 
 
 3. Set the Runner to Start Automatically
@@ -106,9 +98,7 @@ tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
 <pre>
 
 1. sudo ./svc.sh install
-2. sudo ./svc.sh start
-</pre>
-</div>
+2. sudo ./svc.sh start</pre></div>
 
 
 ## GitHub Secrets Setup
