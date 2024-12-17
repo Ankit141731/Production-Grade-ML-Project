@@ -37,12 +37,15 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 2. Install Docker on EC2
 
 <div>
-    <pre>1. sudo apt-get update -y 
-         2. sudo apt-get upgrade -y 
-         3. curl -fsSL https://get.docker.com -o get-docker.sh 
-         4. sudo sh get-docker.sh 
-         5. sudo usermod -aG docker ubuntu 
-         6. newgrp docker </pre>
+<pre>
+
+1. sudo apt-get update -y 
+2. sudo apt-get upgrade -y 
+3. curl -fsSL https://get.docker.com -o get-docker.sh 
+4. sudo sh get-docker.sh 
+5. sudo usermod -aG docker ubuntu 
+6. newgrp docker 
+</pre>
 </div>
 
 3. Set Environment Variables
@@ -59,11 +62,11 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 * Clone the repository:
 
 <div>
-    <pre>
+<pre>
 
 1. git clone https://github.com/yourusername/DataFlow-Prediction-Pipeline.git
 2. cd DataFlow-Prediction-Pipeline
-    </pre>
+</pre>
 </div>
 
 * Build and run the container:
@@ -86,24 +89,25 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 * Choose Linux and execute the provided commands one by one in your EC2 terminal:
 
 <div>
-    <pre>
+<pre>
 
 1. mkdir actions-runner && cd actions-runner
 2. curl -o actions-runner-linux-x64-2.309.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.309.0/actions-runner-linux-x64-2.309.0.tar.gz
 tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
 3. ./config.sh --url https://github.com/yourusername/DataFlow-Prediction-Pipeline --token YOUR_GITHUB_TOKEN
-4. ./run.sh</pre>
+4. ./run.sh
+</pre>
 </div>
 
 
 3. Set the Runner to Start Automatically
 
 <div>
-    <pre>
+<pre>
 
 1. sudo ./svc.sh install
 2. sudo ./svc.sh start
-    </pre>
+</pre>
 </div>
 
 
