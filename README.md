@@ -28,7 +28,9 @@ This repository showcases a machine learning project pipeline designed to predic
 * Connect to your instance using SSH:
 
 <div>
-    <pre>`ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>`</pre>
+    <pre>
+ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
+</pre>
 </div>
 
 
@@ -36,24 +38,23 @@ This repository showcases a machine learning project pipeline designed to predic
 
 <div>
     <pre>
-`sudo apt-get update -y`
-`sudo apt-get upgrade -y`
-`curl -fsSL https://get.docker.com -o get-docker.sh`
-`sudo sh get-docker.sh`
-`sudo usermod -aG docker ubuntu`
-`newgrp docker`
+
+1. sudo apt-get update -y
+2. sudo apt-get upgrade -y
+3. curl -fsSL https://get.docker.com -o get-docker.sh
+4. sudo sh get-docker.sh
+5. sudo usermod -aG docker ubuntu
+6. newgrp docker
+
    </pre>
 </div>
 
 3. Set Environment Variables
 
-<div>
-    <pre>
-    Export __MONGODB_URL__="mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>?retryWrites=true&w=majority"
-    Export __AWS_ACCESS_KEY_ID__=<AWS_ACCESS_KEY_ID>
-    Export __AWS_SECRET_ACCESS_KEY__=<AWS_SECRET_ACCESS_KEY>  
-    </pre>
-</div>
+* Export __MONGODB_URL__="mongodb+srv://<username>:<password>@cluster.mongodb.net/<dbname>?retryWrites=true&w=majority"
+* Export __AWS_ACCESS_KEY_ID__=<AWS_ACCESS_KEY_ID>
+* Export __AWS_SECRET_ACCESS_KEY__=<AWS_SECRET_ACCESS_KEY>  
+
 
 
 
@@ -63,8 +64,9 @@ This repository showcases a machine learning project pipeline designed to predic
 
 <div>
     <pre>
-    `git clone https://github.com/yourusername/DataFlow-Prediction-Pipeline.git`
-    `cd DataFlow-Prediction-Pipeline`
+
+1.   git clone https://github.com/yourusername/DataFlow-Prediction-Pipeline.git
+2.  cd DataFlow-Prediction-Pipeline
     </pre>
 </div>
 
@@ -89,11 +91,12 @@ This repository showcases a machine learning project pipeline designed to predic
 
 <div>
     <pre>
-mkdir actions-runner && cd actions-runner
-curl -o actions-runner-linux-x64-2.309.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.309.0/actions-runner-linux-x64-2.309.0.tar.gz
+
+1. mkdir actions-runner && cd actions-runner
+2. curl -o actions-runner-linux-x64-2.309.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.309.0/actions-runner-linux-x64-2.309.0.tar.gz
 tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
-./config.sh --url https://github.com/yourusername/DataFlow-Prediction-Pipeline --token YOUR_GITHUB_TOKEN
-./run.sh</pre>
+3. ./config.sh --url https://github.com/yourusername/DataFlow-Prediction-Pipeline --token YOUR_GITHUB_TOKEN
+4. ./run.sh</pre>
 </div>
 
 
@@ -105,7 +108,7 @@ tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
 sudo ./svc.sh start
     </pre>
 </div>
-\
+
 
 ## GitHub Secrets Setup
 
