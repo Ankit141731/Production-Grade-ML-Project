@@ -30,7 +30,7 @@ This repository showcases a machine learning project pipeline designed to predic
 <div>
     <pre>
 ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
-</pre>
+    </pre>
 </div>
 
 
@@ -39,11 +39,11 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 <div>
     <pre>
 
-1. sudo apt-get update -y
-2. sudo apt-get upgrade -y
-3. curl -fsSL https://get.docker.com -o get-docker.sh
-4. sudo sh get-docker.sh
-5. sudo usermod -aG docker ubuntu
+1. sudo apt-get update -y 
+2. sudo apt-get upgrade -y 
+3. curl -fsSL https://get.docker.com -o get-docker.sh 
+4. sudo sh get-docker.sh 
+5. sudo usermod -aG docker ubuntu 
 6. newgrp docker
 
    </pre>
@@ -65,8 +65,8 @@ ssh -i "your-key.pem" ubuntu@<EC2-IP-ADDRESS>
 <div>
     <pre>
 
-1.   git clone https://github.com/yourusername/DataFlow-Prediction-Pipeline.git
-2.  cd DataFlow-Prediction-Pipeline
+1. git clone https://github.com/yourusername/DataFlow-Prediction-Pipeline.git
+2. cd DataFlow-Prediction-Pipeline
     </pre>
 </div>
 
@@ -104,8 +104,9 @@ tar xzf ./actions-runner-linux-x64-2.309.0.tar.gz
 
 <div>
     <pre>
-    sudo ./svc.sh install
-sudo ./svc.sh start
+
+1. sudo ./svc.sh install
+2. sudo ./svc.sh start
     </pre>
 </div>
 
